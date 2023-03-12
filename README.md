@@ -1,17 +1,17 @@
 # ggGenshin
 a collection of ggplot2 color scales
 
-ggGenshin is a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili. The package provides a collection of ggplot2 color scales, whose interfaces are similar to ggsci.
+ggGenshin is a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili. The package provides a collection of ggplot2 color scales with similar interfaces to ggsci.
 
 ## Installation
-Paste the code to R console to install ggGenshin from github.
+Paste the code to the R console to install ggGenshin from GitHub.
 
 ```R
 devtools::install_github("RestlessTail/ggGenshin")
 ```
 
 ## Usage
-You can simply use `scale_color_XXX`/`scale_colour_XXX` or `scale_fill_XXX` to create palette as in ggsci. But parameters can be somewhat different.
+You can use `scale_color_XXX`/`scale_colour_XXX` or `scale_fill_XXX` to create a palette like in ggsci. But parameters can be somewhat different.
 
 ```R
 #p is a ggplot object
@@ -20,7 +20,7 @@ print(p + scale_colour_albedo())
 print(p + scale_fill_albedo())
 ```
 
-Each palette of ggGenshin has both discrete and continuous version. ggGenshin returns a discrete palette by default. Use `discrete = FALSE` to create continuous palette.
+Each palette of ggGenshin has both discrete and continuous versions. ggGenshin returns a discrete palette by default. Use `discrete = FALSE` to create a continuous palette.
 
 ```R
 #p is a ggplot object
