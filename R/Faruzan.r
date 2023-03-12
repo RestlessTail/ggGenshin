@@ -15,7 +15,7 @@
 #' pal_faruzan(alpha = 0.5)(10)
 #' pal_faruzan(alpha = 0.5, reverse = TRUE)(20)
 pal_faruzan = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#2C4150", "#6FA0AC", "#B5D3D9", "#FCEEE2", "#5D887B")
+	pal <- c("#2C4150", "#5D887B", "#6FA0AC", "#B5D3D9", "#FCEEE2")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

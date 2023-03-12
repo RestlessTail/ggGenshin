@@ -15,7 +15,7 @@
 #' pal_venti(alpha = 0.5)(10)
 #' pal_venti(alpha = 0.5, reverse = TRUE)(20)
 pal_venti = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#1D2535", "#338A72", "#9CA83F", "#E5D8BB", "#1E71A1")
+	pal <- c("#1D2535", "#1E71A1", "#338A72", "#9CA83F", "#E5D8BB")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

@@ -15,7 +15,7 @@
 #' pal_tao(alpha = 0.5)(10)
 #' pal_tao(alpha = 0.5, reverse = TRUE)(20)
 pal_tao = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#3A1B19", "#7B595E", "#C7A085", "#FCF0E1", "#C94737")
+	pal <- c("#3A1B19", "#7B595E", "#C94737", "#C7A085", "#FCF0E1")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

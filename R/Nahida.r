@@ -15,7 +15,7 @@
 #' pal_nahida(alpha = 0.5)(10)
 #' pal_nahida(alpha = 0.5, reverse = TRUE)(20)
 pal_nahida = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#2E2F23", "#658873", "#B9C78D", "#E7E3E4", "#D2BFA5")
+	pal <- c("#2E2F23", "#658873", "#B9C78D", "#D2BFA5", "#E7E3E4")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

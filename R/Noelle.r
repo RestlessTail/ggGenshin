@@ -15,7 +15,7 @@
 #' pal_noelle(alpha = 0.5)(10)
 #' pal_noelle(alpha = 0.5, reverse = TRUE)(20)
 pal_noelle = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#38333C", "#A07D68", "#A4B386", "#A79FB9", "#A52B55")
+	pal <- c("#38333C", "#A79FB9", "#A4B386", "#A07D68", "#A52B55")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

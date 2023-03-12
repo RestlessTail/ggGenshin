@@ -15,7 +15,7 @@
 #' pal_klee(alpha = 0.5)(10)
 #' pal_klee(alpha = 0.5, reverse = TRUE)(20)
 pal_klee = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#C1351D", "#F6E1C6", "#C08270", "#875648", "#421F1A")
+	pal <- c("#421F1A", "#C1351D", "#875648", "#C08270", "#F6E1C6")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

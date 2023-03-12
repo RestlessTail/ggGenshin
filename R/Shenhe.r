@@ -15,7 +15,7 @@
 #' pal_shenhe(alpha = 0.5)(10)
 #' pal_shenhe(alpha = 0.5, reverse = TRUE)(20)
 pal_shenhe = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#232B36", "#517C89", "#B4BFD0", "#8694AD", "#9C3129")
+	pal <- c("#232B36", "#517C89", "#8694AD", "#B4BFD0", "#9C3129")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

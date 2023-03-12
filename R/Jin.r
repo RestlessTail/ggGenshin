@@ -15,7 +15,7 @@
 #' pal_jin(alpha = 0.5)(10)
 #' pal_jin(alpha = 0.5, reverse = TRUE)(20)
 pal_jin = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#1E1A22", "#67A4BA", "#4E4C72", "#B94E5E", "#D389A1")
+	pal <- c("#1E1A22", "#4E4C72", "#67A4BA", "#D389A1", "#B94E5E")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

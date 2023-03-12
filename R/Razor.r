@@ -15,7 +15,7 @@
 #' pal_razor(alpha = 0.5)(10)
 #' pal_razor(alpha = 0.5, reverse = TRUE)(20)
 pal_razor = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#232238", "#7F716B", "#989FAE", "#B5B26F", "#E3B869")
+	pal <- c("#232238", "#7F716B", "#989FAE", "#E3B869", "#B5B26F")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

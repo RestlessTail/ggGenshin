@@ -15,7 +15,7 @@
 #' pal_dori(alpha = 0.5)(10)
 #' pal_dori(alpha = 0.5, reverse = TRUE)(20)
 pal_dori = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#705992", "#A97399", "#D68294", "#F3BFCA", "#291F27")
+	pal <- c("#291F27", "#705992", "#A97399", "#D68294", "#F3BFCA")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

@@ -15,7 +15,7 @@
 #' pal_kazuha(alpha = 0.5)(10)
 #' pal_kazuha(alpha = 0.5, reverse = TRUE)(20)
 pal_kazuha = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#211918", "#641A11", "#C33828", "#E7DACD", "#AADDD6")
+	pal <- c("#211918", "#AADDD6", "#E7DACD", "#C33828", "#641A11")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

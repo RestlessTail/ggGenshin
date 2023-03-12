@@ -15,7 +15,7 @@
 #' pal_xiangling(alpha = 0.5)(10)
 #' pal_xiangling(alpha = 0.5, reverse = TRUE)(20)
 pal_xiangling = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#000000", "#384871", "#E7BD39", "#AB4F3F", "#47855A")
+	pal <- c("#000000", "#384871", "#47855A", "#E7BD39", "#AB4F3F")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

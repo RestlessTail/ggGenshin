@@ -15,7 +15,7 @@
 #' pal_zhongli(alpha = 0.5)(10)
 #' pal_zhongli(alpha = 0.5, reverse = TRUE)(20)
 pal_zhongli = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#2F2321", "#AA4F23", "#F8EBDC", "#FED875", "#6C627A")
+	pal <- c("#2F2321", "#AA4F23", "#FED875", "#F8EBDC", "#6C627A")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

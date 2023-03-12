@@ -15,7 +15,7 @@
 #' pal_itto(alpha = 0.5)(10)
 #' pal_itto(alpha = 0.5, reverse = TRUE)(20)
 pal_itto = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#211B1B", "#8F402F", "#D2CED2", "#F7DB78", "#553766")
+	pal <- c("#211B1B", "#553766", "#D2CED2", "#F7DB78", "#8F402F")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x

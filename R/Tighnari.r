@@ -15,7 +15,7 @@
 #' pal_tighnari(alpha = 0.5)(10)
 #' pal_tighnari(alpha = 0.5, reverse = TRUE)(20)
 pal_tighnari = function(alpha = 1, reverse = FALSE) {
-	pal <- c("#243258", "#287246", "#B1C44D", "#E7C736", "#F7BF63", "#EEB0AF", "#963460", "#631F66", "#8D5729", "#01899D")
+	pal <- c("#243258", "#01899D", "#287246", "#B1C44D", "#E7C736", "#F7BF63", "#EEB0AF", "#963460", "#631F66", "#8D5729")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x
