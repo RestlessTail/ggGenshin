@@ -1,0 +1,14 @@
+Package: ggGenshin
+Type: Package
+Title: ggplot palettes with Genshin style
+Version: 0.1.0
+Author: Shi Chengge
+Maintainer: Shi Chengge <1826930551@qq.com>
+Description: a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili.
+    The package provides a collection of ggplot2 color scales, whose 
+	interfaces are similar to ggsci.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Imports: ggplot2
