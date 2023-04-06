@@ -37,3 +37,9 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Python setuptools directories
+__pycache__/
+build/
+dist/
+ggGenshinPy.egg-info/

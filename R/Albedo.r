@@ -15,7 +15,7 @@
 #' pal_albedo(alpha = 0.5)(10)
 #' pal_albedo(alpha = 0.5, reverse = TRUE)(20)
 pal_albedo = function(alpha = 1, reverse = FALSE) {
-	pal = c("#282532", "#3A3A68", "#E5D8CB", "#F5CE8A", "#8E6756")
+	pal <- c("#282532", "#3A3A68", "#E5D8CB", "#F5CE8A", "#8E6756")
 	pal_rgb = col2rgb(pal)
 	return(function(x){
 		vec = 1:x
