@@ -1,7 +1,7 @@
 # ggGenshin
-a collection of ggplot2 color scales
+a collection of Genshin-styled color schemes
 
-ggGenshin is a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili. The package provides a collection palettes in the style of Genshin and has both R(ggplot2) and Python (Matplotlib) interfaces.
+ggGenshin is a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili. The package provides a collection palettes in the style of Genshin and has both R (ggplot2) and Python (Matplotlib) interfaces.
 
 ## Installation
 ### R
@@ -70,7 +70,7 @@ ggGenshin::keys()
 Import `colormap` module of ggGenshinPy.
 
 ```python
-import colormap from ggGenshinPy as ggg
+import ggGenshinPy.colormap as ggg
 ```
 
 Use `cmapXXX` method to create a Matplotlib colormap object. ggGenshinPy returns a linear segmented colormap by default. Use `listed = True` to create a listed colormap.
