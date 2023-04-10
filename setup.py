@@ -5,7 +5,7 @@ with open('README.md', 'r') as fh:
 
 setuptools.setup(
         name = 'ggGenshinPy',
-        version = '0.0.1',
+        version = '0.1.0',
         author = 'RestlessTail',
         author_email = '1826930551@qq.com',
         description="a collection of matplotlib color maps",
