@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ggGenshin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>ggGenshin</h1>
+        <p>a collection of Genshin-styled color schemes</p>
+        <p class="view"><a href="https://github.com/RestlessTail/ggGenshin">View the Project on GitHub <small>RestlessTail/ggGenshin</small></a></p>
+		<dl>
+			<dt><a href="./index.html">Home</a></dt>
+			<dt><a href="./usage.html">Usage</a></dt>
+			<dd><a href="./usage.html#how-to-install-ggGenshin">Install</a></dd>
+			<dd><a href="./usage.html#APIs-of-ggGenshin">APIs</a></dd>
+			<dt><a href="./gallary.html">Gallary</a></dt>
+		</dl>
+      </header>
+      <section>
+        <h1>ggGenshin: a collection of Genshin-styled color schemes</h1>
+        <p>ggGenshin is a package inspired by content creator 阿昆的科研日常 of bilibili. The package provides a collection of palettes in the style of Genshin and you can apply these palettes to your plots in a easy way.</p>
+		<p><strong>Features:</strong></p>
+		<ul>
+			<li>Palettes in the style of Genshin</li>
+			<li>APIs that are easy to use</li>
+			<li>Supports R (ggplot2) and Python (Matplotlib)</li>
+		</ul>
+		<p><strong>Use R interface of ggGenshin:</strong></p>
+		<img src="./assets/home/Albedo.svg" alt="Albedo.svg" />
+		<pre><code>library("ggGenshin")
+library("ggplot2")
+library("reshape2")
+library("dplyr")
+
+dat = aggregate(iris[, 1:4], by = list(iris$Species), mean) %>%
+	melt() %>%
+	rename(species = Group.1)
+p = ggplot(dat) +
+	geom_col(aes(x = variable, y = value, fill = species), position = "dodge") +
+	theme_test()
+print(p + scale_fill_albedo())</code></pre>
+		<p><strong>Use Python interface of ggGenshin:</strong></p>
+		<img src="./assets/home/Yoimiya.svg" alt="Albedo.svg" />
+		<pre><code>import matplotlib.pyplot as plt
+import ggGenshinPy.colormap as ggg
+
+heatmapDat = ([0.3, 1.5, 6.3, 5.3, 5.1, 7.2, 6.4, 8.1, 4.2, 8.3], \
+        [5.3, 9.6, 2.4, 6.7, 2.5, 7.6, 4.9, 4.3, 5.2, 7.3], \
+        [3.4, 9.0, 6.7, 0.6, 2.2, 5.3, 4.8, 9.8, 6.6, 1.2])
+plt.imshow(heatmapDat, cmap = ggg.cmapYoimiya())
+plt.show()</code></pre>
+	  </section>
+	  <footer>
+		  <p>This project is maintained by <a href="https://github.com/RestlessTail">Chengge Shi</a></p>
+		  <p><small>The page uses theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+	  </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>ggGenshin</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>ggGenshin</h1>
+        <p>a collection of Genshin-styled color schemes</p>
+        <p class="view"><a href="https://github.com/RestlessTail/ggGenshin">View the Project on GitHub <small>RestlessTail/ggGenshin</small></a></p>
+		<dl>
+			<dt><a href="./index.html">Home</a></dt>
+			<dt><a href="./usage.html">Usage</a></dt>
+			<dd><a href="./usage.html#how-to-install-ggGenshin">Install</a></dd>
+			<dd><a href="./usage.html#APIs-of-ggGenshin">APIs</a></dd>
+			<dt><a href="./gallary.html">Gallary</a></dt>
+		</dl>
+      </header>
+      <section>
+        <h1>Usage</h1>
+        <h2 id="how-to-install-ggGenshin">Install</h2>
+        <h3>R</h3>
+		<p><strong>Use package manager to install ggGenshin online:</strong></p>
+		<p>Like most R packages on GitHub, you can install ggGenshin by using <code>devtools::install_github</code>. Paste the code to the R console to install ggGenshin from GitHub.</p>
+		<pre><code>devtools::install_github("RestlessTail/ggGenshin")</code></pre>
+		<p><strong>Install ggGenshin from source code:</strong></p>
+		<p>You can also install ggGenshin from source code. Download the source code from <a href="https://github.com/RestlessTail/ggGenshin/releases">release page</a> and paste the code to the R console to install ggGenshin from source code (replace SourceFileOfggGenshin.tar.gz with the file you downloaded).</p>
+		<pre><code>install.packages("SourceFileOfggGenshin.tar.gz", type = "source", repos = NULL)</code></pre>
+        <h3>Python</h3>
+		<p><strong>Use pip to install ggGenshinPy online:</strong></p>
+		<p>Using <code>pip</code> is the easiest way to install ggGenshinPy. Paste the code to your console and install ggGenshinPy from GitHub.</p>
+		<pre><code>pip install git+https://github.com/RestlessTail/ggGenshin@master-python</code></pre>
+		<p><strong>Install *.whl file:</strong></p>
+		<p>You can also download <code>*.whl</code> file from <a href="https://github.com/RestlessTail/ggGenshin/releases">release page</a> to install ggGenshinPy under the off-line condition. Paste the code to your console and install ggGenshinPy from GitHub (replace whlFileOfggGenshin.whl with the file you downloaded).</p>
+		<pre><code>pip install whlFileOfggGenshin.whl</code></pre>
+		<h2 id="APIs-of-ggGenshin">APIs</h2>
+		<h3>R</h3>
+		<p>The R interface of ggGenshin mimics ggsci and four sets of APIs are provided.</p>
+		<p><strong>Introduce ggGenshin to your project:</strong></p>
+		<p>Once ggGenshin installed, you can introduce the package to your project by using <code>library</code> function.</p>
+		<pre><code>library("ggGenshin")</code></pre>
+		<p><strong>scale_color_* and scale_colour_*:</strong></p>
+		<p>Mimicking the scale_color_* function of ggsci, it returns a ggplot color scale</p>
+		<p>Parameters:</p>
+		<ul>
+			<li><code>discrete</code>: if true, returns a discrete palette; if false, returns a continuous color palette. (Default to true)</li>
+			<li><code>alpha</code>: the alpha value of each color.</li>
+			<li><code>reverse</code>: invert the color sequence.</li>
+			<li><code>...</code>: passed to the discrete_scale or scale_color_gradientn.</li>
+		</ul>
+		<p>Return: a ggplot color scale.</p>
+		<p>Examples:</p>
+		<pre><code>scale_color_albedo()
+scale_color_albedo(FALSE)
+scale_color_albedo(alpha = 0.5)
+scale_color_albedo(FALSE, alpha = 0.7, reverse = TRUE)</code></pre>
+		<p><strong>scale_fill_*:</strong></p>
+		<p>Mimicking the scale_fill_* function of ggsci, it returns a ggplot color scale</p>
+		<p>Parameters:</p>
+		<ul>
+			<li><code>discrete</code>: if true, returns a discrete palette; if false, returns a continuous color palette. (Default to true)</li>
+			<li><code>alpha</code>: the alpha value of each color.</li>
+			<li><code>reverse</code>: invert the color sequence.</li>
+			<li><code>...</code>: passed to the discrete_scale or scale_fill_gradientn.</li>
+		</ul>
+		<p>Return: a ggplot color scale.</p>
+		<p>Examples:</p>
+		<pre><code>scale_fill_albedo()
+scale_fill_albedo(FALSE)
+scale_fill_albedo(alpha = 0.5)
+scale_fill_albedo(FALSE, alpha = 0.7, reverse = TRUE)</code></pre>
+		<p><strong>pal_*:</strong></p>
+		<p>Mimicking the pal_* function of ggsci, it returns a function which returns a vector of hexadecimal colors.</p>
+		<p>Parameters:</p>
+		<ul>
+			<li><code>alpha</code>: the alpha value of each color.</li>
+			<li><code>reverse</code>: invert the color sequence.</li>
+		</ul>
+		<p>Return: a function that returns a vector of hexadecimal colors.</p>
+		<p>Examples:</p>
+		<pre><code>pal_albedo()(10)
+pal_albedo(alpha = 0.5)(10)
+pal_albedo(alpha = 0.5, reverse = TRUE)(20)</code></pre>
+		<p><strong>rgb_*:</strong></p>
+		<p>Mimicking the rgb_* function of ggsci, it returns a vector of hexadecimal colors.</p>
+		<p>Parameters:</p>
+		<ul>
+			<li><code>n</code>: the number of colors generated.</li>
+			<li><code>alpha</code>: the alpha value of each color.</li>
+			<li><code>reverse</code>: invert the color sequence.</li>
+		</ul>
+		<p>Return: a vector of hexadecimal colors.</p>
+		<p>Examples:</p>
+		<pre><code>rgb_albedo()
+rgb_albedo(10)
+rgb_albedo(n = 10, alpha = 0.5)
+rgb_albedo(n = 20, alpha = 0.7, reverse = TRUE)</code></pre>
+		<p><strong>keys:</strong></p>
+		<p>returns the available key names, as well as the full names in both Chinese and English.</p>
+		<p>Return: a data frame.</p>
+		<p>Examples:</p>
+		<pre><code>ggGenshin::keys()</code></pre>
+		<h3>Python</h3>
+		<p><strong>Introduce ggGenshinPy to your project:</strong></p>
+		<p>Once ggGenshin installed, you can introduce the package to your project by using <code>import</code> command.</p>
+		<pre><code>from ggGenshinPy import colormap as ggg
+import ggGenshinPy.colormap as ggg # You can also use this command</code></pre>
+		<p><strong>cmap*:</strong></p>
+		<p>Returns a Matplotlib colormap object.</p>
+		<p>Parameters:</p>
+		<ul>
+			<li><code>discrete</code>: if true, returns a listed colormap; if false, returns a linear segmented colormap. (Default to false)</li>
+		</ul>
+		<p>Return: a Matplotlib colormap object.</p>
+		<p>Examples:</p>
+		<pre><code>ggg.cmapYoimiya()
+ggg.cmapYoimiya(listed = True) # create a listed colormap</code></pre>
+		<p><strong>keys:</strong></p>
+		<p>Print available key names, as well as the full names in both Chinese and English.</p>
+		<p>Examples:</p>
+		<pre><code>ggg.keys()</code></pre>
+	  </section>
+	  <footer>
+		  <p>This project is maintained by <a href="https://github.com/RestlessTail">Chengge Shi</a></p>
+		  <p><small>The page uses theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+	  </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
