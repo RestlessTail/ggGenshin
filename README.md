@@ -3,6 +3,10 @@ a collection of Genshin-styled color schemes
 
 ggGenshin is a package inspired by ggsci and content creator 阿昆的科研日常 of bilibili. The package provides a collection palettes in the style of Genshin and has both R (ggplot2) and Python (Matplotlib) interfaces.
 
+## TODOs
++ Balanced palette: palettes better suited for heat map and feature plot etc.
+	* Progress: <progress value = '0' max = '100'></progress>0%.
+
 ## Installation
 ### R
 Paste the code to the R console to install ggGenshin from GitHub.
